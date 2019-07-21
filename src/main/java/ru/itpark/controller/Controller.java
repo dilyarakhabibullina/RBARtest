@@ -36,6 +36,7 @@ public class Controller {
         return "edit";
     }
 
+    // Этот маппинг перехватывал запросы на картинки
     @GetMapping("/{id}")
     public String details(@PathVariable int id, Model model) {
         model.addAttribute("pilot", service.findById(id));
